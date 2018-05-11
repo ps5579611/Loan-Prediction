@@ -381,7 +381,7 @@ x$Loan_Status<-recode(x$Loan_Status,"1='Y'; else='N'")
 
 
 write.csv(x,"C:/Users/patel/Desktop/project/sample_submission.csv",row.names = F)
-###################################K-nn############################################
+###################################Random Forest############################################
 library(randomForest)
 y_pred <- randomForest(x=train[,c(-1,-13)],y=train$Loan_Status,ntree = 10)
 
